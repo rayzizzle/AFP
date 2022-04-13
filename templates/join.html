@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Join a Game
+{% endblock %}
+
+{% block main %}
+<h1>Available Games:</h1>
+<table class="table">
+<thead style="background-color: #D6EEEE">
+    <tr>
+        <th>Admin</th>
+        <th>Game Name</th>
+    </tr>
+</thead>
+<tbody>
+    {% for game in Games %}
+        <tr>
+            <td>{{ game.admin_name }}</td>
+            <td>{{ game.Name }}</td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+<br>
+<h3>Enter keyword to join a game</h3>
+<form action="/join" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="key" name="key" placeholder="Keyword" type="text">
+        <br>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+{% endblock %}

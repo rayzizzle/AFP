@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    target
+{% endblock %}
+
+{% block main %}
+<p>Happy Spooning!</p>
+<table class="table">
+    <thead style="background-color: #D6EEEE">
+        <tr>
+            <th>Game Name</th>
+            <th>Target</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for target in targets %}
+            <tr>
+                <td>{{ target.gamename }}</td>
+                <td>{{ target.targetname }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create Game
+{% endblock %}
+
+{% block main %}
+<h2>Create a Game</h2>
+    <form action="/create" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="gamename" name="gamename" placeholder="Game Name" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="key" name="key" placeholder="key" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+<p>Note: If you want to play in the game you are creating, you will have to join it like everyone else by inputting they key on the Join Game tab.</p>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Games You've Joined <!--sos dont want title to say assassins-->
+{% endblock %}
+
+{% block main %}
+<h2>    
+Games You've Joined
+</h2>
+<p>Congratulations! You have officially joined a game! You will be notified by email of your target once the admin starts the game.</p>
+<p>Remeber: only share your key with people who you want to allow to join the game.</p>
+<table class="table">
+    <thead style="background-color: #D6EEEE">
+        <tr>
+            <th>Admin</th>
+            <th>Game Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for game in Games %}
+            <tr>
+                <td>{{ game.admin_name }}</td>
+                <td>{{ game.Name }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Games
+{% endblock %}
+
+{% block main %}
+<h2>Begin a Game</h2>
+<p>Type the name of your game here to autimatically assign targets and reveal them to your player on their accounts. <br>
+    <strong>Note:</strong> you will not be able to see the pairings, only your target in the Games You've Joined tab.</p>
+<form action="/yourgames" method="post">
+    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="gamename" name="gamename" placeholder="Game Name" type="text">
+    <br>
+    <button class="btn btn-primary" type="submit">Click to Start Game</button>
+</form>
+<br>
+<br>
+<br>
+<h2>    
+Your Games
+</h2>
+<p>Congratulations! You have officially created a game. On this page you can see who has joined and you can start the game whenever you choose. You will be automatically entered into the game and will not be able to see the pairings once they are made.</p>
+<p>Remember: only share your key with people who you want to allow to join the game.</p>
+<table class="table">
+    <thead style="background-color: #D6EEEE">
+        <tr>
+            <!--<th>Admin</th>-->
+            <th>Game Name</th>
+            <th>Key</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for game in Games %}
+            <tr>
+                <!--<td>{{ game.admin_name }}</td>-->
+                <td>{{ game.Name }}</td>
+                <td>{{ game.Key }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</thead>
+<br>
+<table class="table">
+<thead style="background-color: #D6EEEE">
+    <tr>
+        <th>Game Name</th>
+        <th>Users</th>
+    </tr>
+</thead>
+<tbody>
+    {% for player in players %}
+        <tr>
+            <td>{{ player.GameName }}</td>
+            <td>{{ player.username }}</td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+    </tbody>
+</table>
+
+{% endblock %}

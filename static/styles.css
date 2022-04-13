@@ -1,0 +1,55 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+nav .navbar-brand
+{
+    text-align: center; /*WANT TO CENTER TITLE GRR*/
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+    
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.explanation
+{
+    margin-left: 100px;
+    margin-right:100px;
+}
+
+ol
+{
+    text-align: left;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+table, th, td 
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100px;
+
+  }
+
+th
+{
+    background-color: #D6EEEE;
+}
